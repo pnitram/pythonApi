@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-consultants = [
+consultantList =[ 
   { 
     'name': 'Kristoffer Risa',
     'aboutMe':'Consultant in Visma Retail. SQL and Csharp guru',
@@ -31,9 +31,9 @@ def get_consultants():
              myList.append(each)
       except KeyError:
           pass
-    return jsonify(myList)
+    return jsonify(consultants = myList)
   else:
-    return jsonify(consultants)
+    return jsonify(consultants = consultantList)
 
 
 @app.route('/consultants', methods=['POST'])
