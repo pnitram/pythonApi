@@ -25,7 +25,7 @@ def get_consultants():
   skill = args['skill']
   print (args) # For debugging
   if skill != 'showAll':
-    for each in consultants:
+    for each in consultantList:
       try:
           if skill in each['mySkills']: 
              myList.append(each)
