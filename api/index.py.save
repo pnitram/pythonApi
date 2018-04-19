@@ -1,0 +1,34 @@
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+consultants = [
+  { 'name': 'Kristoffer Risa',
+    'aboutMe':'Consultant in Visma Retail. SQL and Csharp guru',
+    'myProjects':['bla', 'bla', 'bla'],
+    'mySkills':['Java','Csharp','php'],
+    'askMeAbout':['C#', 'Java', 'Sql', 'html', 'REST api'] 
+  },
+  { 'name': 'Nils Nilsen',
+    'aboutMe':'Consultant in Visma Retail.',
+    'myProjects':['bla', 'bla', 'bla'],
+    'mySkills':['Ruby','css','html'],
+    'askMeAbout':['Ruby', 'Css', 'html']
+  }
+
+]
+
+
+@app.route('/consultants')
+def get_consultants():
+  args = request.args
+ # skill = args['mySkill']
+ # name = args['name']
+  print (args) # For debugging
+  return jsonify(consultants(mySkills=="Java"))
+
+
+@app.route('/consultants', methods=['POST'])
+def add_consultant():
+  consultants.append(request.get_json())
+  return '', 204
