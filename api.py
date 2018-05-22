@@ -15,7 +15,28 @@ consultantList =[
     'myProjects':['bla', 'bla', 'bla'],
     'mySkills':['ruby','css','php'],
     'askMeAbout':['ruby', 'css', 'php']
+   },
+  { 'name': 'Erik Eriksen',
+    'aboutMe':'Consultant in Visma Retail.',
+    'myProjects':['bla', 'bla', 'bla'],
+    'mySkills':['ruby','java','php'],
+    'askMeAbout':['ruby', 'css', 'php']
+   },
+  { 'name': 'Ola Olsen',
+    'aboutMe':'Consultant in Visma Retail.',
+    'myProjects':['bla', 'bla', 'bla'],
+    'mySkills':['ruby','css','java'],
+    'askMeAbout':['ruby', 'css', 'php']
+   },
+  { 'name': 'Trond Trondsen',
+    'aboutMe':'Consultant in Visma Retail.',
+    'myProjects':['bla', 'bla', 'bla'],
+    'mySkills':['java','python','php'],
+    'askMeAbout':['ruby', 'css', 'php']
    }
+
+
+
 ]
 
 @app.route('/consultants')
